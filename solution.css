@@ -1,0 +1,9 @@
+To solve this issue, be mindful of CSS specificity rules.  You can use the `!important` flag, but this is generally discouraged for maintainability reasons. A better approach would be to adjust your selectors.  For instance, you could make the selectors more specific to ensure that the correct styles are applied. One approach to solve the specificity issue could be to adjust the selectors. One approach would be to increase the specificity of the `.myParagraph` selector by making it more specific to the element it should target. For instance:
+
+```css
+#myDiv > .myParagraph {
+  color: red !important; 
+}
+```
+
+This makes it more specific than `#myDiv p`. Alternatively, you could change your HTML structure to make the specificity of the styles easier to manage.
