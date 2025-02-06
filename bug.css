@@ -1,0 +1,19 @@
+The CSS specificity rules can sometimes lead to unexpected results. For example, consider the following scenario:
+
+```html
+<div id="myDiv">
+  <p class="myParagraph">This is some text.</p>
+</div>
+```
+
+```css
+#myDiv p {
+  color: blue;
+}
+
+.myParagraph {
+  color: red;
+}
+```
+
+In this case, both the `#myDiv p` and `.myParagraph` selectors target the paragraph element. However, the `#myDiv p` selector is more specific, as it includes an ID selector, so it will override the `.myParagraph` selector and the text will be blue, not red.
